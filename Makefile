@@ -7,8 +7,19 @@ install:
 reinstall:
 	pip install --user --force-reinstall dist/*.whl
 
-gendiff_help:
+gendiff-help:
 	poetry run python -m gendiff.scripts.gendiff -h
 
-gendiff_prob:
+gendiff-prob:
 	poetry run python -m gendiff.scripts.gendiff /home/furia/python-project-50/gendiff/file1.json /home/furia/python-project-50/gendiff/file2.json
+
+lint:
+	poetry run flake8 gendiff
+	poetry run flake8 tests
+
+test:
+	poetry run pytest
+
+test-cov:
+	# poetry run pytest --cov
+	FUNCTION_VERSION=right pytest --cov-report term-missing --cov=gendiff/scripts tests/test_gendiff.py

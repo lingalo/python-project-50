@@ -37,10 +37,13 @@ jobs:
 
     steps:
       - name: Where I am
-        run: pwd
+        run: |
+          pwd
+          make lint
+        
 
-      - name: Chek lint
-        run: make lint
+      #- name: Chek lint
+       # run: make lint
     
  #   steps:
   #    - run: make lint

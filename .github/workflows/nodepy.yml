@@ -13,8 +13,8 @@ jobs:
     
       - name: Install poetry and dependencies
         run: |
-          curl -sSL https://install.python-poetry.org | python3 -
-          make install
+          #curl -sSL https://install.python-poetry.org | python3 -
+          #make install
 
       - name: Check lint
         run: make lint

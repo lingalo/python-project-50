@@ -1,57 +1,41 @@
 name: GitHub-Actions
-
-# on – определяет события, которые запускают воркфлоу
-# on: push # Так, если событие одно
-
-
 on:
   - push
   - pull_request
 
-
 jobs:
-  # build – произвольно выбранное имя задания
-  # их может быть больше одного
-  
   build:
-    # Операционная система в виртуальной машине, в которой запускаются процессы
     runs-on: ubuntu-latest
 
     steps:
-      # Actions от github: клонирует репозиторий на вирт. машину
-      - uses:  actions/checkout@v3
-      
-      # run – произвольная bash-команда
-      # ls -la выведет содержимое текущего репозитория
-      - name: Show directory
+      - name: Cloning repository
+        uses:  actions/checkout@v3
+    
+      - name: Install poetry and dependencies
         run: |
-          ls -la
-          pwd
           curl -sSL https://install.python-poetry.org | python3 -
           make install
- #     - name: Install project
-  #      run: make install
+
   lint:
     runs-on: ubuntu-latest
     needs: build
 
     steps:
-      - name: Where I am
+      - name: Cloning repository
+        uses:  actions/checkout@v3
+  
+      - name: Check lint
         run: |
           pwd
           make lint
         
-
-      #- name: Chek lint
-       # run: make lint
-    
- #   steps:
-  #    - run: make lint
   test:
     runs-on: ubuntu-latast
     needs : build
-
     steps:
+      - name: Cloning repository
+        uses:  actions/checkout@v3
+
       - name: Check tests
         run: make test
       

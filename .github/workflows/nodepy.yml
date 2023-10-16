@@ -38,12 +38,17 @@ jobs:
     steps:
       - name: Where I am
         run: pwd
+
+      - name: Chek lint
+        run: make lint
+    
  #   steps:
   #    - run: make lint
+  test:
+    runs-on: ubuntu-latast
+    needs : build
 
- # test:
-  #  runs-on: ubuntu-latast
-
-   # steps:
-    #  - run: make test
+    steps:
+      - name: Check tests
+        run: make test
       

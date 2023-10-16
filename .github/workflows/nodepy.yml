@@ -1,4 +1,4 @@
-name: GitHub Actions
+name: GitHub-Actions
 
 # on – определяет события, которые запускают воркфлоу
 # on: push # Так, если событие одно
@@ -18,22 +18,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Actions от github: проверяет репозиторий, гит и т.д.
+      # Actions от github: клонирует репозиторий на вирт. машину
       - uses:  actions/checkout@v3
       
       # run – произвольная bash-команда
       # ls -la выведет содержимое текущего репозитория
-      - name: Install project
-        run: make install
-  lint:
-    runs-on: ubuntu-latest
+      - name: Show directory
+        run: |
+          ls -la
+          pwd
+ #     - name: Install project
+  #      run: make install
+  #lint:
+  #  runs-on: ubuntu-latest
+#
+ #   steps:
+  #    - run: make lint
 
-    steps:
-      - run: make lint
+ # test:
+  #  runs-on: ubuntu-latast
 
-  test:
-    runs-on: ubuntu-latast
-
-    steps:
-      - run: make test
+   # steps:
+    #  - run: make test
       

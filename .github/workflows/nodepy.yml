@@ -31,5 +31,5 @@ jobs:
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.secret }}
         with:
-          coverage_command: make test-cov
+          coverageCommand: make test-cov
           debug: true

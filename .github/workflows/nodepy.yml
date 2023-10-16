@@ -27,6 +27,8 @@ jobs:
         run: |
           ls -la
           pwd
+          curl -sSL https://install.python-poetry.org | python3 -
+          poetry --version
  #     - name: Install project
   #      run: make install
   #lint:

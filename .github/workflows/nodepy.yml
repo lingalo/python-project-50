@@ -32,3 +32,4 @@ jobs:
           CC_TEST_REPORTER_ID: ${{ 1f9c8772d72e7b8f65adb77ff3253fe5584daa1d62dd37372fd39ef2805239b8.CC_TEST_REPORTER_ID }}
         with:
           coverage_command: make test-cov
+          debug: true

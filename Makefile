@@ -21,5 +21,6 @@ test:
 	poetry run pytest
 
 test-cov:
+	poetry run pytest --cov=gendiff --cov-report xml
 	# poetry run pytest --cov
-	FUNCTION_VERSION=right pytest --cov-report term-missing --cov=gendiff/scripts tests/test_gendiff.py
+	# FUNCTION_VERSION=right pytest --cov-report term-missing --cov=gendiff/scripts tests/test_gendiff.py

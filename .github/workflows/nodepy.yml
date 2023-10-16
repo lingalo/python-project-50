@@ -28,6 +28,7 @@ jobs:
       - name: Test-coverage and publish CodeCoverage
         uses: paambaati/codeclimate-action@v5
         # Add Code Climate key
+        # PUSH
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.secret }}
         with:

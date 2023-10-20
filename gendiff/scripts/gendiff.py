@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from gendiff.scripts import parsing
+from gendiff import generate_diff
 import argparse
 
 
@@ -13,7 +13,13 @@ def parse():
     parser.add_argument('-f', '--format', help='set format of output')
 
     args = parser.parse_args()
-    print(parsing.generate_diff(args.first_file, args.second_file))
+    # Если параметр --format указали явно или не указали вовсе:
+    if args.format == 'stylish' or not args.format:
+        print(generate_diff(args.first_file, args.second_file))
+    if args.format == 'plain':
+        print(generate_diff(args.first_file, args.second_file, 'plain'))
+    if args.format == 'json':
+        print(generate_diff(args.first_file, args.second_file, 'json'))
 
 
 def main():

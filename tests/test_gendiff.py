@@ -9,10 +9,10 @@ from tests.fixtures.collected_differences import diff1, diff2
 from gendiff.collect_diff import collect_diff
 
 
-from gendiff.stylish import stylish
+from gendiff.formatting.stylish import stylish
 
 
-from gendiff.plain import plain
+from gendiff.formatting.plain import plain
 
 
 file_path_json1 = Path("tests", "fixtures", "json", "flat", "file1.json")

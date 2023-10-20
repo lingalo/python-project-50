@@ -2,10 +2,10 @@ import json
 import yaml
 from yaml.loader import SafeLoader
 from pathlib import Path
-from gendiff.stylish import stylish
-from gendiff.plain import plain
+from gendiff.formatting.stylish import stylish
+from gendiff.formatting.plain import plain
 from gendiff.collect_diff import collect_diff
-from gendiff.json import json_diff
+from gendiff.formatting.json import json_diff
 
 
 SAME = '    '

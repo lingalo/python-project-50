@@ -15,7 +15,7 @@ gendiff-prob:
 
 lint:
 	poetry run flake8 gendiff
-	poetry run flake8 tests/test_gendiff.py
+	poetry run flake8 tests
 
 test:
 	poetry run pytest

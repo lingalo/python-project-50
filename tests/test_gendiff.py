@@ -5,7 +5,6 @@ from pathlib import Path
 
 
 from gendiff.parsing import file_to_dict
-from tests.fixtures.collected_differences import diff1, diff2
 from gendiff.collect_diff import collect_diff
 
 
@@ -33,6 +32,12 @@ file_path_tree_yaml3 = Path("tests", "fixtures", "yaml", "tree", "file3.yaml")
 file_path_tree_yaml4 = Path("tests", "fixtures", "yaml", "tree", "file4.yaml")
 
 
+path_to_diff1 = Path("tests", "fixtures", "diff_tree_file1_2.json")
+path_to_diff2 = Path("tests", "fixtures", "diff_tree_file3_4.json")
+diff1 = file_to_dict(path_to_diff1)
+diff2 = file_to_dict(path_to_diff2)
+
+
 def test_gen_dif():
     RIGHT = Path("tests", "fixtures", "diff_file1_file2")
     with open(RIGHT) as right_file:
@@ -58,6 +63,9 @@ def test_collect_diff():
     yaml_tree_data2 = file_to_dict(file_path_tree_yaml2)
     yaml_tree_data3 = file_to_dict(file_path_tree_yaml3)
     yaml_tree_data4 = file_to_dict(file_path_tree_yaml4)
+
+    diff1 = file_to_dict(path_to_diff1)
+    diff2 = file_to_dict(path_to_diff2)
 
     # Три теста всего, по аналогии с первым, пять путей
     assert collect_diff(json_tree_data1, json_tree_data2) == diff1

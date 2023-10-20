@@ -1,0 +1,31 @@
+{
+    "hell": {
+        "diff": "added",
+        "value": "boy"
+    },
+    "hello": {
+        "diff": "unchanged",
+        "value": "world"
+    },
+    "is": {
+        "diff": "changed",
+        "value1": false,
+        "value2": true
+    },
+    "nested": {
+        "diff": "node",
+        "value": {
+            "cg": {
+                "diff": "deleted",
+                "value": 6
+            },
+            "count": {
+                "diff": "changed",
+                "value1": 5,
+                "value2": {
+                    "cg": 6
+                }
+            }
+        }
+    }
+}

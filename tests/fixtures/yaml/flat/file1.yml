@@ -2,9 +2,3 @@ host: "hexlet.io"
 timeout: 50
 proxy: "123.234.53.22"
 follow: false
-
-
-# A null: null
-# Also a null: # Empty
-# Not a null: ""
-# Booleans: [ true, True, false, FALSE ]

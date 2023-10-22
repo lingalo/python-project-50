@@ -1,4 +1,4 @@
-from gendiff.to_json_value import to_json_value
+from gendiff import to_json_value
 # На вход попадает дифф уже готовый
 
 
@@ -10,8 +10,8 @@ def plain(node):  # noqa: C901
         if not isinstance(node, dict):
             if path not in result:
                 result.append(path)
-                return (path, to_json_value(node, flag=1))
-            return to_json_value(node, flag=1)
+                return (path, to_json_value(node, type='repr'))
+            return to_json_value(node, type='repr')
 
         for key, value_n in node.items():
             slov = {'added': '+ ', 'deleted': '- ', 'node': '  '}

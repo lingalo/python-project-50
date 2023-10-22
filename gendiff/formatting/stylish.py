@@ -1,4 +1,4 @@
-from gendiff.to_json_value import to_json_value
+from gendiff import to_json_value
 # Принимает на вход словарь с собранным диффом, преобразует в строку
 
 

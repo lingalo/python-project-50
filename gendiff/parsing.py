@@ -3,7 +3,7 @@ def collect_diff(data1, data2):  # noqa: C901
     keys = sorted(data1.keys() | data2.keys())
     for key in keys:
         value1 = data1.get(key)
-        value2 = data2.get(key
+        value2 = data2.get(key)
 
         if key not in data1:
             diff[key] = {'diff': 'added', 'value': value2}

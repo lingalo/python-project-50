@@ -9,7 +9,7 @@ INSTRUCTIONS = {
     '.yaml': lambda file_: yaml.load(file_, Loader=SafeLoader),
     '.yml': lambda file_: yaml.load(file_, Loader=SafeLoader),
     '.json': lambda file_: json.load(file_)
-    }
+}
 
 
 # Могу ли я обойтись без импорта Path?

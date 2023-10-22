@@ -4,17 +4,17 @@ from gendiff import file_to_dict, stylish
 
 flat_diff_path = Path(
     "tests", "fixtures", "json", "flat", "collected_diff_1_2.json"
-    )
+)
 tree_diff_path = Path(
     "tests", "fixtures", "json", "tree", "collected_diff_3_4.json"
-    )
+)
 
 stylish_flat_path = Path(
     "tests", "fixtures", "json", "flat", "stylish_diff_file1_file2"
-    )
+)
 stylish_tree_path = Path(
     "tests", "fixtures", "json", "tree", "stylish_diff_file3_file4"
-    )
+)
 
 
 def test_stylish():

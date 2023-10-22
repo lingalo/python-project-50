@@ -9,10 +9,10 @@ tree_path4 = Path("tests", "fixtures", "json", "tree", "file4.json")
 
 flat_diff_path = Path(
     "tests", "fixtures", "json", "flat", "collected_diff_1_2.json"
-    )
+)
 tree_diff_path = Path(
     "tests", "fixtures", "json", "tree", "collected_diff_3_4.json"
-    )
+)
 
 
 def test_collect_diff():

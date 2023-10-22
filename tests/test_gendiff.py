@@ -9,13 +9,13 @@ path_json2 = Path("tests", "fixtures", "json", "flat", "file2.json")
 # +json:
 flat_collected_diff = Path(
     "tests", "fixtures", "json", "flat", "collected_diff_1_2.json"
-    )
+)
 stylish_flat_path = Path(
     "tests", "fixtures", "json", "flat", "stylish_diff_file1_file2"
-    )
+)
 plain_flat_path = Path(
     "tests", "fixtures", "json", "flat", "plain_diff_file1_file2"
-    )
+)
 
 path_json3 = Path("tests", "fixtures", "json", "tree", "file3.json")
 path_json4 = Path("tests", "fixtures", "json", "tree", "file4.json")
@@ -23,13 +23,13 @@ path_json4 = Path("tests", "fixtures", "json", "tree", "file4.json")
 # +json:
 tree_collected_diff = Path(
     "tests", "fixtures", "json", "tree", "collected_diff_3_4.json"
-    )
+)
 stylish_tree_path = Path(
     "tests", "fixtures", "json", "tree", "stylish_diff_file3_file4"
-    )
+)
 plain_tree_path = Path(
     "tests", "fixtures", "json", "tree", "plain_diff_file3_file4"
-    )
+)
 
 
 def test_generate_diff():
